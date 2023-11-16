@@ -55,7 +55,6 @@ export default function Form() {
 
     return (
         <View style={styles.formContext}>
-            <Text>Calcular IMC</Text>
             {imc == null ? (
                 <Pressable onPress={Keyboard.dismiss} style={styles.form}>
                     <Text style={styles.formLabel}>Altura</Text>
