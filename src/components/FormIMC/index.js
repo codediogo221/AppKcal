@@ -21,7 +21,6 @@ export default function Form() {
     const [imc, setImc] = useState(null)
     const [textButton, setTextButton] = useState('Calcular')
     const [errorMessage, setErrorMessage] = useState(null)
-    const [imcList, setImcList] = useState([])
 
     function verifyImc() {
         if (imc === null) {
@@ -33,7 +32,6 @@ export default function Form() {
     function calcImc() {
         let heightFormat = height.replace(',', '.')
         let totalImc = (weight / (heightFormat * heightFormat)).toFixed(2);
-        setImcList((arr) => [...arr, { id: new Date().getTime(), imc: totalImc }]);
         setImc(totalImc);
     }
 
@@ -95,20 +93,7 @@ export default function Form() {
                     </TouchableOpacity>
                 </View>
             )}
-            <FlatList
-                showsVerticalScrollIndicator={false}
-                style={styles.listImcs}
-                data={imcList.reverse()}
-                renderItem={({ item }, key) => {
-                    return (
-                        <Text style={styles.resultImcItem}>
-                            <Text style={styles.textResultItemList} key={key}>Resultado IMC =</Text>
-                            {item.imc}
-                        </Text>
-                    );
-                }}
-                keyExtractor={item => item.id}
-            />
+
         </View>
     );
 }
