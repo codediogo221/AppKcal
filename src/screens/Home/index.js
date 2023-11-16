@@ -32,7 +32,7 @@ export const Home = () => {
             <Text>Peso (Kg)</Text>
             <Text>Gênero</Text>
             <Text>Idade</Text>
-            <Text>Atividade</Text>
+            <Text>IMC</Text>
         </View>
 
         </View> 
