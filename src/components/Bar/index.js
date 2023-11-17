@@ -6,7 +6,7 @@ import {
     PranchetaLogo,
 } from './style';
 
-import UserLogoImage from '../../assets/user.png';
+import ImcLogoImage from '../../assets/imcLogo.png';
 import GraficoLogoImage from '../../assets/grafico.png';
 import PranchetaLogoImage from '../../assets/prancheta.png';
 
@@ -14,7 +14,7 @@ export default function Bar() {
     return (
         <CategoryContainer>
             <TouchableOpacity>
-                <UserLogo source={UserLogoImage} />
+                <UserLogo source={ImcLogoImage} />
             </TouchableOpacity>
 
             <TouchableOpacity>
