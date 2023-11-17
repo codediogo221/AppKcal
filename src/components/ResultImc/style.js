@@ -14,6 +14,13 @@ export const ResultImcText = styled.Text`
     font-weight: bold;
 `;
 
+export const ClassificationText = styled.Text`
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10px;
+`;
+
 export const TitleResultImc = styled.Text`
     font-size: 18px;
     color: #ff0043;
