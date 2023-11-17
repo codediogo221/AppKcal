@@ -1,18 +1,14 @@
-import { StyleSheet } from "react-native";
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-    header: {
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#FFDEAD',
-        marginBottom: -25,
-    },
+export const HeaderContainer = styled.View`
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFDEAD;
+    margin-bottom: -25px;
+`;
 
-    KcalLogoImg: {
-        width: 200,
-        height: 200,
-    },
-});
-
-export default styles;
+export const KcalLogoImg = styled.Image`
+    width: 200px;
+    height: 200px;
+`;

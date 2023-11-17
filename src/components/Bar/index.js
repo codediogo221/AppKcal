@@ -1,25 +1,29 @@
-import {Image, View, TouchableOpacity} from 'react-native';
-import styles from "./style";
+import { TouchableOpacity } from 'react-native';
+import {
+    CategoryContainer,
+    UserLogo,
+    GraficoLogo,
+    PranchetaLogo,
+} from './style';
 
-import UserLogo from '../../assets/user.png';
-import GraficoLogo from '../../assets/grafico.png';
-import PranchetaLogo from '../../assets/prancheta.png';
+import UserLogoImage from '../../assets/user.png';
+import GraficoLogoImage from '../../assets/grafico.png';
+import PranchetaLogoImage from '../../assets/prancheta.png';
 
-export default function Bar () {
-
-    return (     
-        <View style={styles.category}>
+export default function Bar() {
+    return (
+        <CategoryContainer>
             <TouchableOpacity>
-                <Image style={styles.UserLogo} source={UserLogo}/>
+                <UserLogo source={UserLogoImage} />
             </TouchableOpacity>
 
             <TouchableOpacity>
-                <Image style={styles.GraficoLogo} source={GraficoLogo}/>
+                <GraficoLogo source={GraficoLogoImage} />
             </TouchableOpacity>
 
             <TouchableOpacity>
-                <Image style={styles.PranchetaLogo} source={PranchetaLogo}/>
+                <PranchetaLogo source={PranchetaLogoImage} />
             </TouchableOpacity>
-        </View>
-    )
-};
+        </CategoryContainer>
+    );
+}

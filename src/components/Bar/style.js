@@ -1,35 +1,31 @@
-import { StyleSheet } from "react-native";
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-    category: {
-        backgroundColor: '#F4A460',
-        padding: 10,
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        marginBottom: 15,
-    },
+export const CategoryContainer = styled.View`
+    background-color: #F4A460;
+    padding: 10px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+`;
 
-    UserLogo: {
-        width: 40,
-        height: 40,
-    },
+export const UserLogo = styled.Image`
+    width: 40px;
+    height: 40px;
+`;
 
-    GraficoLogo: {
-        width: 40,
-        height: 40,
-    },
+export const GraficoLogo = styled.Image`
+    width: 40px;
+    height: 40px;
+`;
 
-    PranchetaLogo: {
-        width: 55,
-        height: 40,
-    },
+export const PranchetaLogo = styled.Image`
+    width: 55px;
+    height: 40px;
+`;
 
-    categoryText: {
-        fontSize: 20,
-        fontWeight: '700',
-        color: 'black'
-    },
-});
-
-export default styles;
+export const CategoryText = styled.Text`
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+`;

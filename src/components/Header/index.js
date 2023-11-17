@@ -1,13 +1,11 @@
-import {Image, View} from 'react-native';
-import styles from "./style";
+import React from 'react';
+import { HeaderContainer, KcalLogoImg } from './style';
+import KcalLogo from '../../assets/logo.png';
 
-import KcalLogo from '../../assets/logo.png'
-
-export default function Header () {
-
+export default function Header() {
     return (
-        <View style={styles.header}>
-            <Image style={styles.KcalLogoImg} source={KcalLogo}/>
-        </View> 
-    )
-};
+        <HeaderContainer>
+            <KcalLogoImg source={KcalLogo} />
+        </HeaderContainer>
+    );
+}
