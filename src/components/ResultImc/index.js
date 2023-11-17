@@ -8,6 +8,9 @@ import {
     BoxShareButton,
     ShareButton,
     ShareText,
+    HealthTipsContainer,
+    HealthTipsText,
+
 } from './style';
 
 export default function ResultImc(props) {
@@ -31,17 +34,34 @@ export default function ResultImc(props) {
 
     const imcClassification = getIMCClassification(props.resultImc);
 
+    const healthTips = {
+        'Abaixo do peso': 'Dica para quem está abaixo do peso: Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio, Acabou',
+
+        'Peso normal': 'Dica para quem está abaixo do peso: Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio, Acabou',
+
+        'Sobrepeso': 'Dica para quem está abaixo do peso: Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio, Acabou',
+
+        'Obesidade': 'Dica para quem está abaixo do peso: Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio,Pratique muito exercicio, Acabou',
+    };
+
+    const tips = healthTips[imcClassification] || '';
+
     return (
         <ContextImc>
             <TitleResultImc>{props.messageResultImc}</TitleResultImc>
             <ResultImcText>{props.resultImc}</ResultImcText>
             <ClassificationText>{imcClassification}</ClassificationText>
 
+            <HealthTipsContainer>
+                <HealthTipsText>{tips}</HealthTipsText>
+            </HealthTipsContainer>
+
             <BoxShareButton>
                 <ShareButton onPress={onShare}>
                     <ShareText>Compartilhar</ShareText>
                 </ShareButton>
             </BoxShareButton>
+
         </ContextImc>
     );
 }

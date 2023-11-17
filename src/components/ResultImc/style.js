@@ -45,3 +45,17 @@ export const ShareText = styled.Text`
     font-weight: bold;
     padding-horizontal: 30px;
 `;
+
+export const HealthTipsContainer = styled.View`
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 90%;
+`;
+
+export const HealthTipsText = styled.Text`
+  font-size: 16px;
+  color: #333333;
+  
+`;

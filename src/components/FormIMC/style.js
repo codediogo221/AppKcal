@@ -54,7 +54,7 @@ export const ErrorMessage = styled.Text`
 
 export const ExhibitionResultImc = styled.View`
     width: 100%;
-    height: 50%; 
+    height: 80%; 
 `;
 
 export const ListImcs = styled.View`
