@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 
 export const ContextImc = styled.View`
     flex: 1;
-    margin-top: 20px;
     padding-top: 15px;
     align-items: center;
     width: 100%;
@@ -38,6 +37,7 @@ export const ShareButton = styled.TouchableOpacity`
     border-radius: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 15px;
 `;
 
 export const ShareText = styled.Text`

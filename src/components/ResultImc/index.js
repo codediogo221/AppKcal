@@ -36,6 +36,7 @@ export default function ResultImc(props) {
             <TitleResultImc>{props.messageResultImc}</TitleResultImc>
             <ResultImcText>{props.resultImc}</ResultImcText>
             <ClassificationText>{imcClassification}</ClassificationText>
+
             <BoxShareButton>
                 <ShareButton onPress={onShare}>
                     <ShareText>Compartilhar</ShareText>
