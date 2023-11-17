@@ -1,29 +1,32 @@
 import { TouchableOpacity } from 'react-native';
 import {
     CategoryContainer,
-    UserLogo,
-    GraficoLogo,
-    PranchetaLogo,
+    KcalLogoImg,
+    ImcLogoImg,
+    IconContainer,
 } from './style';
 
-import ImcLogoImage from '../../assets/imcLogo.png';
-import GraficoLogoImage from '../../assets/grafico.png';
-import PranchetaLogoImage from '../../assets/prancheta.png';
+import KcalLogo from '../../assets/logo.png';
+import ImcLogo from '../../assets/imcLogo.png';
 
 export default function Bar() {
     return (
         <CategoryContainer>
-            <TouchableOpacity>
-                <UserLogo source={ImcLogoImage} />
-            </TouchableOpacity>
+            <IconContainer>
 
-            <TouchableOpacity>
-                <GraficoLogo source={GraficoLogoImage} />
-            </TouchableOpacity>
+                <TouchableOpacity>
+                    <KcalLogoImg source={KcalLogo} />
+                </TouchableOpacity>
 
-            <TouchableOpacity>
-                <PranchetaLogo source={PranchetaLogoImage} />
-            </TouchableOpacity>
+                <TouchableOpacity>
+                    <ImcLogoImg source={ImcLogo} />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <KcalLogoImg source={KcalLogo} />
+                </TouchableOpacity>
+
+                </IconContainer>
         </CategoryContainer>
     );
 }

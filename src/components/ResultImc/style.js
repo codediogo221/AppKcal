@@ -57,5 +57,4 @@ export const HealthTipsContainer = styled.View`
 export const HealthTipsText = styled.Text`
   font-size: 16px;
   color: #333333;
-  
 `;
