@@ -1,14 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import * as React from 'react';
+import MainContainer from './src/MainContainer';
 
-import Bar from './src/components/Bar';
-import FormIMC from './src/components/FormIMC';
-
-export default function App() {
+function App() {
   return (
-    <>
-      <Bar />
-      <FormIMC />
-      <StatusBar style="auto" />
-    </>
+    <MainContainer/>
   );
 }
+
+export default App;

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import {
-    Vibration,
-    Keyboard,
-} from "react-native";
+import { Vibration, Keyboard } from 'react-native';
+
 import {
     FormContext,
     FormContainer,
@@ -14,9 +12,10 @@ import {
     ExhibitionResultImc,
     ExplanationText,
 } from "./style";
+
 import ResultImc from "../ResultImc";
 
-export default function Form() {
+export default function ImcCalc({ navigation }) {
     const [height, setHeight] = useState(null);
     const [weight, setWeight] = useState(null);
     const [messageImc, setMessageImc] = useState('Preencha o peso e altura');
