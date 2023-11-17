@@ -12,6 +12,7 @@ import {
     TextButtonCalculator,
     ErrorMessage,
     ExhibitionResultImc,
+    ExplanationText,
 } from "./style";
 import ResultImc from "../ResultImc";
 
@@ -54,6 +55,11 @@ export default function Form() {
 
     return (
         <FormContext>
+            
+            <ExplanationText>
+                O IMC é o Índice de Massa Corporal e tem o objetivo de definir qual é o peso ideal para cada indivíduo
+            </ExplanationText>
+            
             {imc == null ? (
                 <FormContainer onPress={() => Keyboard.dismiss()}>
                     <FormLabel>Altura</FormLabel>

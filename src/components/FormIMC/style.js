@@ -73,3 +73,9 @@ export const TextResultItemList = styled.Text`
     color: red;
     font-size: 16px;
 `;
+
+export const ExplanationText = styled.Text`
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+`;
