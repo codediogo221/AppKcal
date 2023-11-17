@@ -32,6 +32,12 @@ function MainContainer() {
             
             return <Image source={iconPath} style={{ width: size, height: size }} />;
           },
+          headerRight: () => (
+            <Image
+              source={require('./assets/logo.png')}
+              style={{ width: 40, height: 40, marginRight: 10 }}
+            />
+          ),
         })}
         screnOptions={{
           activeTintColor: 'tomato',
