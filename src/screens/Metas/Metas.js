@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList } from 'react-native';
-import * as Styles from './styles';
+import { FlatList } from 'react-native';
+import * as Styles from './style';
 import { metas as initialMetas } from '../../components/mocks'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
