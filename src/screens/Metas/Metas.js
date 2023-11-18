@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList } from 'react-native';
 import * as Styles from './style';
-import { metas as initialMetas } from '../../components/mocks'
+import { metas as initialMetas } from '../../components/mocks/metas'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Metas({ navigation }) {
