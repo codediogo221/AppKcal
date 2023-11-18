@@ -15,8 +15,8 @@ const MetasName = "Metas";
 // Imagens para cada tela
 const tabIcons = {
   [ImcCalcName]: require('./assets/imcLogo.png'),
-  [CaloriesCalcName]: require('./assets/logo.png'),
-  [MetasName]: require('./assets/logo.png'),
+  [CaloriesCalcName]: require('./assets/kcalLogo.png'),
+  [MetasName]: require('./assets/metasLogo.png'),
 };
 
 const Tab = createBottomTabNavigator();
