@@ -1,12 +1,59 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, FlatList } from 'react-native';
+import * as Styles from './styles';
+import { metas as initialMetas } from '../../components/mocks'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Metas({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => navigation.navigate('Metas')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Metas Screen</Text>
-        </View>
+  const [meta, setMeta] = useState('');
+  const [metas, setMetas] = useState(initialMetas);
+
+  const addMeta = () => {
+    if (meta.trim() !== '') {
+      setMetas([...metas, { id: metas.length + 1, text: meta, completed: false }]);
+      setMeta('');
+    }
+  };
+
+  const toggleMeta = (id) => {
+    setMetas((prevMetas) =>
+      prevMetas.map((meta) =>
+        meta.id === id ? { ...meta, completed: !meta.completed } : meta
+      )
     );
+  };
+
+  const removeMeta = (id) => {
+    setMetas((prevMetas) => prevMetas.filter((meta) => meta.id !== id));
+  };
+
+  return (
+    <Styles.Container>
+      <Styles.Title>Metas</Styles.Title>
+      
+      <Styles.InputContainer>
+        <Styles.Input
+          placeholder="Digite uma meta"
+          value={meta}
+          onChangeText={(text) => setMeta(text)}
+        />
+        <Styles.StyledButton title="Adicionar" onPress={addMeta} />
+      </Styles.InputContainer>
+
+      <FlatList
+        data={metas}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <Styles.MetaItem
+            completed={item.completed}
+            onPress={() => toggleMeta(item.id)}
+            onLongPress={() => removeMeta(item.id)}
+          >
+            <Styles.MetaText completed={item.completed}>{item.text}</Styles.MetaText>
+            {item.completed && <Icon name="check" size={20} color="#007bff" />}
+          </Styles.MetaItem>
+        )}
+      />
+    </Styles.Container>
+  );
 }
