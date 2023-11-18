@@ -3,6 +3,9 @@ import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
+// Teste de sync - Diogopsantos
+
 // Screens
 import CaloriesCalc from './screens/CaloriesCalc/CaloriesCalc';
 import ImcCalc from './screens/ImcCalc/ImcCalc';
