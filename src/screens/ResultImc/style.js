@@ -33,7 +33,7 @@ export const BoxShareButton = styled.View`
 `;
 
 export const ShareButton = styled.TouchableOpacity`
-    background-color: #1877f2;
+    background-color: #FFA07A;
     border-radius: 50px;
     padding-top: 5px;
     padding-bottom: 5px;

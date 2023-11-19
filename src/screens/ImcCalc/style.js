@@ -33,7 +33,7 @@ export const ButtonCalculator = styled.TouchableOpacity`
     align-items: center;
     justify-content: center;
     width: 90%;
-    background-color: #FF0043;
+    background-color: #FF7F50;
     padding-top: 14px;
     padding-bottom: 14px;
     margin-left: 12px;

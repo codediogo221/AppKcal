@@ -12,7 +12,7 @@ import Dicas from './screens/Dicas/Dicas';
 const ImcCalcName = "IMC";
 const CaloriesCalcName = "Contador de Calorias";
 const MetasName = "Metas";
-const DicasName = "Dicas";
+const DicasName = "Dicas de Saúde";
 
 // Imagens para cada tela
 const tabIcons = {
