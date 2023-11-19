@@ -14,6 +14,7 @@ const CaloriasCalculator = () => {
   const [proteinas, setProteinas] = useState('');
   const [gorduras, setGorduras] = useState('');
   const [calorias, setCalorias] = useState(0);
+  const [botaoTexto, setBotaoTexto] = useState('Calcular');
 
   const [carbError, setCarbError] = useState('');
   const [protError, setProtError] = useState('');
@@ -47,6 +48,10 @@ const CaloriasCalculator = () => {
     const caloriasTotais = carbs * 4 + prots * 4 + fats * 9;
 
     setCalorias(caloriasTotais);
+    setCarboidratos('');
+    setProteinas('');
+    setGorduras('');
+    setBotaoTexto('Calcular Novamente');
   };
 
   return (
@@ -86,7 +91,7 @@ const CaloriasCalculator = () => {
       />
       {fatError ? <StyledErrorText>{fatError}</StyledErrorText> : null}
       <StyledCalculateButton onPress={calcularCalorias}>
-        <StyledButtonText>Calcular</StyledButtonText>
+        <StyledButtonText>{botaoTexto}</StyledButtonText>
       </StyledCalculateButton>
       <StyledResult>Total de Calorias: {calorias}</StyledResult>
     </StyledContainer>
