@@ -7,16 +7,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CaloriesCalc from './screens/CaloriesCalc/CaloriesCalc';
 import ImcCalc from './screens/ImcCalc/ImcCalc';
 import Metas from './screens/Metas/Metas';
+import Dicas from './screens/Dicas/Dicas';
 
 const ImcCalcName = "IMC";
 const CaloriesCalcName = "Contador de Calorias";
 const MetasName = "Metas";
+const DicasName = "Dicas";
 
 // Imagens para cada tela
 const tabIcons = {
   [ImcCalcName]: require('./assets/imcLogo.png'),
   [CaloriesCalcName]: require('./assets/kcalLogo.png'),
   [MetasName]: require('./assets/metasLogo.png'),
+  [DicasName]: require('./assets/dicasLogo.png'),
 };
 
 const Tab = createBottomTabNavigator();
@@ -49,6 +52,7 @@ function MainContainer() {
         <Tab.Screen name={ImcCalcName} component={ImcCalc} />
         <Tab.Screen name={CaloriesCalcName} component={CaloriesCalc} />
         <Tab.Screen name={MetasName} component={Metas} />
+        <Tab.Screen name={DicasName} component={Dicas} />
       </Tab.Navigator>
     </NavigationContainer>
   );
