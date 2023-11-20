@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Vibration } from 'react-native'
 import {
   StyledContainer,
   StyledTextExplicativo,
@@ -26,18 +27,19 @@ const CaloriasCalculator = () => {
     setFatError('');
 
     if (!carboidratos) {
-      setCarbError('Campo obrigatório');
+      setCarbError('Campo obrigatório*');
     }
 
     if (!proteinas) {
-      setProtError('Campo obrigatório');
+      setProtError('Campo obrigatório*');
     }
 
     if (!gorduras) {
-      setFatError('Campo obrigatório');
+      setFatError('Campo obrigatório*');
     }
 
     if (!carboidratos || !proteinas || !gorduras) {
+      Vibration.vibrate();
       return;
     }
 

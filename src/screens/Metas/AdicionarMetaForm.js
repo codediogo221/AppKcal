@@ -27,7 +27,7 @@ const AdicionarMetaForm = ({ onAdicionarMeta }) => {
         style={{ marginBottom: 10 }}
       />
       <TextInput
-        placeholder="Titulo da Descrição"
+        placeholder="Descrição da Tarefa"
         value={novaMeta.description}
         onChangeText={(text) => handleInputChange('description', text)}
         style={{ marginBottom: 10 }}

@@ -21,6 +21,8 @@ export const FormLabel = styled.Text`
 
 export const Input = styled.TextInput`
     width: 90%;
+    border-width: 1px;
+    border-color: #ccc;
     border-radius: 50px;
     background-color: #f6f6f6;
     height: 40px;
